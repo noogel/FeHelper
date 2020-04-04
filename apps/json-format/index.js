@@ -161,20 +161,21 @@ new Vue({
         },
 
         changeLayout: function (type) {
-            if (type === 'up-down') {
-                if (this.$refs.btnUpDown.classList.contains('selected')) {
-                    return;
-                }
-                this.$refs.panelBody.classList.add('layout-up-down');
-                this.$refs.btnLeftRight.classList.remove('selected');
-                this.$refs.btnUpDown.classList.add('selected');
-            } else {
+            if (type === 'left-right') {
                 if (this.$refs.btnLeftRight.classList.contains('selected')) {
                     return;
                 }
                 this.$refs.panelBody.classList.remove('layout-up-down');
                 this.$refs.btnLeftRight.classList.add('selected');
                 this.$refs.btnUpDown.classList.remove('selected');
+            } else {
+                if (this.$refs.btnUpDown.classList.contains('selected')) {
+                    return;
+                }
+                this.$refs.panelBody.classList.add('layout-up-down');
+                this.$refs.btnLeftRight.classList.remove('selected');
+                this.$refs.btnUpDown.classList.add('selected');
+
             }
             localStorage.setItem(LOCAL_KEY_OF_LAYOUT, type);
         },

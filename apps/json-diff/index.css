@@ -32,12 +32,12 @@ body {
 }
 
 .box-wrapper-left {
-    height: 100%;
-    padding:0 5px 0 0;
+    /*height: 100%;*/
+    padding:5px 5px;
 }
 .box-wrapper-right {
-    height: 100%;
-    padding:0 0 0 5px;
+    /*height: 100%;*/
+    padding:5px 5px;
 }
 #jsonSourceLeft, #jsonSourceRight, .CodeMirror {
     height: calc(100%);
